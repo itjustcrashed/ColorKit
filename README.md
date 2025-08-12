@@ -9,6 +9,9 @@ let rgbRed = rgb(1, 0, 0)
 let hsbRed = hsb(0, 1, 1)
 presetRed == rgbRed && presetRed == hsbRed // Returns true
 ```
+> [!IMPORTANT]
+> Colors are constructed using values between 0 and _1_, **NOT** 360, 255, or 100.
+> If you need to use degrees/8-bit/percentages, divide the value by 360, 255, or 100.
 
 You can then use properties like `Color.compliment` and `Color.grayscale` on any `Color` value. `Color` conforms to [`Codable`](https://developer.apple.com/documentation/Foundation/encoding-and-decoding-custom-types), 
 [`Hashable`](https://developer.apple.com/documentation/swift/hashable), [`Equatable`](https://developer.apple.com/documentation/swift/equatable), and
@@ -40,7 +43,3 @@ In `Package.swift`:
 ```
 ### Xcode Project
 File → Add Package Dependencies and search `https://github.com/itjustcrashed/ColorKit.git`
-
-> [!IMPORTANT]
-> Colors are constructed using values between 0 and _1_, **NOT** 360, 255, or 100.
-> If you need to use degrees/8-bit/percentages, divide the value by 360, 255, or 100.
