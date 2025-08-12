@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "swift",
+			"args": [
+				"build",
+				"--build-tests"
+			],
+			"env": {},
+			"disableTaskQueue": true,
+			"group": "build",
+			"problemMatcher": [],
+			"label": "Swift: Build All",
+			"detail": "swift build --build-tests"
+		},
+		{
+			"type": "swift",
+			"args": [
+				"test"
+			],
+			"env": {},
+			"disableTaskQueue": true,
+			"group": "test",
+			"problemMatcher": [],
+			"label": "Swift: Test All",
+			"detail": "swift test"
+		}
+	]
+}
