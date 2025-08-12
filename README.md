@@ -38,6 +38,8 @@ let hsbRed = hsb(0, 1, 1)
 presetRed == rgbRed && presetRed == hsbRed // Returns true
 ```
 
+You can then use properties like `Color.compliment` and `Color.grayscale` on any `Color`.
+
 > [!IMPORTANT]
 > Colors are constructed using values between 0 and _1_, **NOT** 360, 255, or 100.
 > If you need to use degrees/8-bit/percentages, divide the value by 360, 255, or 100.
