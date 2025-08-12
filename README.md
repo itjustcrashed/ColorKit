@@ -27,7 +27,7 @@ In `Package.swift`:
 // name/products/platforms...
     dependencies: [
         // From a release (Make sure to check the package releases!)
-        .package(url: "https://github.com/itjustcrashed/ColorKit.git", from: "1.0.0")
+        .package(url: "https://github.com/itjustcrashed/ColorKit.git", from: "v1.0.0")
         // Latest commit (Don't use this in production!)
         .package(url: "https://github.com/itjustcrashed/ColorKit.git", branch: "main")
     ],
