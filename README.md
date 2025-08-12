@@ -1,6 +1,19 @@
 # ColorKit
 A cross-platform color library for Swift.
 
+ColorKit provides two convenient functions to initialize a color: `hsb()` and `rgb`, as well as presets:
+```swift
+// Creates three identical reds.
+let presetRed = Color.red
+let rgbRed = rgb(1, 0, 0)
+let hsbRed = hsb(0, 1, 1)
+presetRed == rgbRed && presetRed == hsbRed // Returns true
+```
+
+You can then use properties like `Color.compliment` and `Color.grayscale` on any `Color` value. `Color` conforms to [`Codable`](https://developer.apple.com/documentation/Foundation/encoding-and-decoding-custom-types), 
+[`Hashable`](https://developer.apple.com/documentation/swift/hashable), [`Equatable`](https://developer.apple.com/documentation/swift/equatable), and
+[`Sendable`](https://developer.apple.com/documentation/swift/sendable) (in that order) so you can do basically anything with them.
+
 ## Prerequisites
 * Swift 6.2 or later
 
@@ -27,18 +40,6 @@ In `Package.swift`:
 ```
 ### Xcode Project
 File → Add Package Dependencies and search `https://github.com/itjustcrashed/ColorKit.git`
-
-## Usage
-ColorKit provides two convenient functions to initialize a color: `hsb()` and `rgb`, as well as presets:
-```swift
-// Creates three identical reds.
-let presetRed = Color.red
-let rgbRed = rgb(1, 0, 0)
-let hsbRed = hsb(0, 1, 1)
-presetRed == rgbRed && presetRed == hsbRed // Returns true
-```
-
-You can then use properties like `Color.compliment` and `Color.grayscale` on any `Color`.
 
 > [!IMPORTANT]
 > Colors are constructed using values between 0 and _1_, **NOT** 360, 255, or 100.
